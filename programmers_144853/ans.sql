@@ -1,0 +1,6 @@
+--https://school.programmers.co.kr/learn/courses/30/lessons/144853
+
+SELECT BOOK_ID, DATE_FORMAT(PUBLISHED_DATE,'%y-%M-%D') "PUBLISHED_DATE"
+    FROM BOOK
+    WHERE CATEGORY = "인문" AND DATE_FORMAT(PUBLISHED_DATE,'%Y') = "2021"
+    ORDER BY PUBLISHED_DATE ASC;
