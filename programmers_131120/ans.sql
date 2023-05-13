@@ -1,0 +1,8 @@
+--https://school.programmers.co.kr/learn/courses/30/lessons/131120
+-- IS NOT NULL 활용
+SELECT MEMBER_ID, MEMBER_NAME,GENDER, DATE_FORMAT(DATE_OF_BIRTH,'%Y-%m-%d') "DATE_OF_BIRTH"
+    FROM MEMBER_PROFILE
+    WHERE TLNO IS NOT NULL 
+        AND DATE_FORMAT(DATE_OF_BIRTH,'%m') LIKE '%03%' 
+        AND GENDER = 'W'
+    ORDER BY MEMBER_ID;
