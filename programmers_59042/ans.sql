@@ -1,0 +1,8 @@
+--https://school.programmers.co.kr/learn/courses/30/lessons/59042
+
+SELECT AO.ANIMAL_ID, AO.NAME
+    FROM ANIMAL_INS AI
+    RIGHT OUTER JOIN ANIMAL_OUTS AO
+    ON AI.ANIMAL_ID = AO.ANIMAL_ID
+    WHERE AI.ANIMAL_ID IS NULL
+    ORDER BY AO.ANIMAL_ID;
