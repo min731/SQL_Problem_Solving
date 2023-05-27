@@ -1,0 +1,9 @@
+--https://school.programmers.co.kr/learn/courses/30/lessons/164671
+-- WHERE 서브쿼리 , CONCAT() 활용
+
+SELECT CONCAT('/home/grep/src/',B.BOARD_ID,'/',B.FILE_ID,B.FILE_NAME, B.FILE_EXT) "FILE_PATH"
+    FROM USED_GOODS_BOARD A
+    INNER JOIN USED_GOODS_FILE B
+    ON A.BOARD_ID = B.BOARD_ID
+    WHERE A.VIEWS = (SELECT MAX(VIEWS) FROM USED_GOODS_BOARD)
+    ORDER BY B.FILE_ID DESC;
